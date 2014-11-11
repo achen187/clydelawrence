@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clyde Lawrence Band</title>
+    <link rel="shortcut icon" href="media/logo.png">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+<!--    <link rel="stylesheet" type="text/css" href="responsive.css" />-->
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="snap.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+<!--    <script src="responsive.js"></script>-->
+    <script type="text/javascript" src="snap.js"></script>
+<!--
+    <script src="waypoints.js"></script>
+    <script src="waypoints-sticky.js"></script>
+-->
+    <script src="index.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+//            $('.sticky-navigation').waypoint('sticky');
+            var snapper = new Snap({
+                element: document.getElementById('content'),
+                disable: 'right',
+                tapToClose: true,
+                touchToDrag: false
+            });
+            var menu = $(".mobile-toggle");            
+            menu.click(function(){
+                if( snapper.state().state=="left" ){
+                    snapper.close();
+                } else {
+                    snapper.open('left');
+                }
+            }); 
+            $('.snap-drawer a').click(function() {
+                snapper.close();
+            });
+            $('.snap-drawer i').click(function() {
+                snapper.close();
+            });
+        });
+    </script>
+</head>
+<body>
+        <div class="snap-drawers">
+            <div class="snap-drawer snap-drawer-left beneath">
+                <div>
+                    <a href="#art"><h3>CLYDE LAWRENCE</h3></a>
+                    <ul>
+                        <li><a id="shows-drawer" href="#latest">LATEST</a></li>
+                        <li><a href="#shows">SHOWS</a></li>
+                        <li><a href="#bands">ABOUT</a></li>
+                        <li><a href="#Music">MEDIA</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                        <li class="media-drawer">
+                            <div>
+                        <i class="social_side fa fa-youtube fa-2x"></i>
+                    <i class="social_side fa fa-twitter fa-2x"></i>
+                                <i class="social_side fa fa-spotify fa-2x"></i></div><div>
+                    <i class="social_side fa fa-facebook fa-2x"></i>
+                    <i class="social_side fa fa-soundcloud fa-2x"></i>
+                    <i class="social_side fa fa-instagram fa-2x"></i>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+            <div class="sticky-navigation">
+            <div class="toggle-wrapper">
+            <div class="mobile-toggle"> <span></span> <span></span> <span></span> </div>
+                    <a class="mobile_logo_wrapper" href="#art"><img class="mobile_logo" src="media/logo.png" height="80px" width="80px"></a>
+                <div class="mobile_social">
+                <div ><i class="social_icon_nav fa fa-facebook fa-2x"></i>
+                    <i class="social_icon_nav fa fa-soundcloud fa-2x"></i>
+                    <i class="social_icon_nav fa fa-instagram fa-2x"></i>
+                    </div>
+                    <div>
+                    <i class="social_icon_nav fa fa-youtube fa-2x"></i>
+                    <i class="social_icon_nav fa fa-twitter fa-2x"></i>
+                    <i class="social_icon_nav fa fa-spotify fa-2x"></i></div>
+                    </div>
+                
+            </div>
+            <ul id="nav-bar">
+                <li><a class="under_border_orange" href="#latest">LATEST</a></li>
+                <li><a class="under_border_yellow" href="#shows">SHOWS</a></li>
+                <li><a class="under_border_red" href="#bands">ABOUT</a></li>
+                <li><a href="#art"><img class="header_logo" src="media/logo.png" height="80px" width="80px"></a></li>
+                <li><a class="under_border_red" href="#Music">MEDIA</a></li>
+                <li><a class="under_border_yellow" href="#contact">CONTACT</a></li>
+                <li><div><i class="social_icon_nav fa fa-facebook fa-2x"></i>
+                    <i class="social_icon_nav fa fa-soundcloud fa-2x"></i>
+                    <i class="social_icon_nav fa fa-instagram fa-2x"></i>
+                    </div>
+                    <div>
+                    <i class="social_icon_nav fa fa-youtube fa-2x"></i>
+                    <i class="social_icon_nav fa fa-twitter fa-2x"></i>
+                    <i class="social_icon_nav fa fa-spotify fa-2x"></i></div>
+                </li>
+            </ul>
+        </div>
+    <div id="content" class="snap-content beneath">
+        <div class="main-content">
+<!--
+        <div class="header">
+            Your Header Here</div>
+-->
+<!--
+        <header class="main_h nav_bar">
+              <div class="row">
+                <div class="mobile-toggle"> <span></span> <span></span> <span></span> </div>
+                <nav>
+                  <ul>
+                    <li><a href="#shows">SHOWS</a></li>
+                    <li><a href="#latest">LATEST</a></li>
+                    <li><a href="#bands">ABOUT</a></li>
+                    <li><a href="#Music">MEDIA</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                  </ul>
+                </nav>
+              </div>
+               </row>  
+
+            </header>
+-->
+            <div id="art">
+                <img id="cover" src="media/albumcove.png" width=60% height=auto>
+                <a href="https://www.facebook.com/events/467874140020832/">
+                <div class="next_show">
+                    <div class="inner_next_show">
+                    <h4 class="next_show_text">Next Show</h4>
+                    <h2 class="location">Bowery Electric, Nov 8</h2>
+                    <h3>New York, NY</h3>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div id="latest" class="section">
+            <h3 class="title"> Latest </h3>
+            <div class="content_square orange">
+                <h4 class="content_title large_text">Back to Dartmouth</h4>
+                <p class="content_text small_text">Third year in a row. The Dartmouth bros do Spring Weekend right. Gracie, Karsh, Sumner, Jonny and Marc will all be there. #sunsoutclydesout</p>
+            </div>
+            <div class="content_square yellow">
+                <h4 class="content_title large_text">Back to Dartmouth</h4>
+                <p class="content_text small_text">Third year in a row. The Dartmouth bros do Spring Weekend right. Gracie, Karsh, Sumner, Jonny and Marc will all be there. #sunsoutclydesout</p>
+            </div>
+            <div class="content_square red">
+                <h4 class="content_title large_text">Back to Dartmouth</h4>
+                <p class="content_text small_text">Third year in a row. The Dartmouth bros do Spring Weekend right. Gracie,  and</p>
+            </div>
+        </div>
+
+        <div id="shows" class="section">
+            <h3 class="title"> Shows </h3>
+            <div class="content_square orange show_table">
+                <h4 class="show_date white_text large_text">Nov 7</h4>
+                <div class="show_location">
+                    <h4 class="show_event white_text large_text">U Penn (Woodser)</h4>
+                    <h5 class="show_city white_text medium_text">Philadelphia, PA</h5>
+                </div>
+                <div class="show_details hidden_details">
+                    <h5 class="show_details_text white_text medium_text">Private Event</h5>
+<!--                    <span class="fa fa-arrow-circle-right fa-lg white_text arrow"></span>-->
+                </div>
+            </div>
+            <div class="content_square yellow show_table">
+                <h4 class="show_date white_text large_text">Nov 8</h4>
+                <div class="show_location">
+                    <h4 class="show_event white_text large_text">Bowery Electric</h4>
+                    <p class="show_city white_text medium_text">New York, NY</p>
+                </div>
+                
+                <div class="show_details">
+                                    <a href="https://www.facebook.com/events/467874140020832/">
+                    <h4 class="show_details_text white_text medium_text">Details</h4>
+                    <span class="fa fa-arrow-circle-right fa-lg white_text arrow"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="content_square red show_table">
+                <h4 class="show_date white_text large_text">Nov 22</h4>
+                <div class="show_location">
+                    <h4 class="show_event white_text large_text">Brown University (Sigma Chi Formal)</h4>
+                    <p class="show_city white_text medium_text">Providence, RI</p>
+                </div>
+                <div class="show_details hidden_details">
+                    <h4 class="show_details_text white_text medium_text">Private Event</h4>
+<!--                    <span class="fa fa-arrow-circle-right fa-lg white_text arrow"></span>-->
+                </div>
+            </div>
+            <div class="content_square orange show_table">
+                <h4 class="show_date white_text large_text">Nov 28</h4>
+                <div class="show_location">
+                    <h4 class="show_event white_text large_text">Bitter End</h4>
+                    <p class="show_city white_text medium_text">New York, NY</p>
+                </div>
+                <div class="show_details">
+                    <h4 class="show_details_text white_text medium_text">Details Coming</h4>
+<!--                    <span class="fa fa-arrow-circle-right fa-lg white_text arrow"></span>-->
+                </div>
+            </div>
+        </div>
+        
+        <div id="bands" class="section">
+            <h3 class="title"> The Clyde Lawrence Band</h3>
+            <div class="content_square orange">
+                <p class="band_description white_text small_text">
+Clyde Lawrence Band is a soulful pop band based in New York City and Providence, Rhode Island, led by sibling duo Clyde and Gracie Lawrence.  Influenced by artists such as Ray Charles, Jackson 5, Randy Newman, Stevie Wonder, and Amy Winehouse, the Clyde Lawrence Band mixes new and old and combines elements of soul, R&B, funk, and pop.  In addition to their originals, they use their soulful stylings to re-imagine songs from a wide array of artists -- from The Beatles to Beyonce.  Since recently releasing their debut album, Homesick, they have performed regularly at venues and colleges around the northeast.
+                </p>
+            </div>
+            <div class="content_square yellow clyde_table">
+                <div id="clyde" class="band_table_cell white_text">
+                    <h4 class="clyde_name large_text">Clyde Lawrence</h4>
+                    <h5 class="clyde_band">Vocals/Keys</h5>
+                    <div class="band_table_small">
+                    <img src="media/clyde.jpg" class="circle">
+                </div>
+                    <p class="band_description small_text">
+Clyde Lawrence began playing piano and writing music soon after.  In addition to his career as a songwriter and performer with the Clyde Lawrence Band, he composes songs and score for films, perhaps most notably at age 6, when Clyde was admitted as the youngest member of the Songwriters Guild of America for his work on Miss Congeniality (2000).  His music has also been featured in Music and Lyrics (2007), as well as the upcoming comedies The Rewrite (2015) and Hard Sell (2015), among others.  He has performed on ABC, FOX, and NBC (on the Today Show’s New Year’s Special), and he has worked with and been produced by acclaimed songwriter/producer Adam Schlesinger (Fountains of Wayne/That Thing You Do!); engineer Geoff Sanoff; and written for and performed alongside Grammy Award-winning jazz singer/producer Steve Tyrell.  He is currently a senior at Brown University.
+                    </p>
+                </div>
+<!--
+                <div class="band_table_cell">
+                    <img src="media/clyde.jpg" class="circle">
+                </div>
+-->
+            </div>
+            <div class="content_square red clyde_table">
+                
+<!--
+                <div class="band_table_cell">
+                    <img src="media/clyde.jpg" class="circle">
+                </div>
+-->
+                <div id="gracie" class="band_table_cell white_text">
+                    <h4 class="clyde_name large_text">Gracie Lawrence</h4>
+                    <h5 class="clyde_band">Vocals</h5>
+                    <div class="gracie_image band_table_small">
+                    <img src="media/gracie.jpg" class="circle">
+                </div>
+                    <p class="band_description small_text">
+Unlike her brother, who did not consider himself a singer or performer until much later, Gracie Lawrence has been a performer since practically the day she was born.  In addition to the Clyde Lawrence Band, Gracie is an accomplished actress who has performed on Broadway in Neil Simon’s Brighton Beach Memoirs and on the big screen in films such as The Sitter, among others.
+                    </p>
+                </div>
+            </div>
+            <div class="content_square orange">
+                <div class="small_band_wrapper">
+                                        <div class="band_wrapper">
+                    <div class="small_band">
+                        <img src="media/Sam4.jpg" class="small_circle">
+                        <h5 class="small_name">Sam Askin</h5>
+                        <h6 class="small_instr">Drums</h6>
+                    </div>
+                    <div class="small_band">
+                        <img src="media/Sumner.jpg" class="small_circle">
+                        <h5 class="small_name">Sumner Becker</h5>
+                        <h6 class="small_instr">Alto Sax</h6>
+                    </div>
+                    </div>
+                    <div class="band_wrapper">
+                    <div class="small_band">
+                        <img src="media/Jordan.jpg" class="small_circle">
+                        <h5 class="small_name">Jordan Cohen</h5>
+                        <h6 class="small_instr">Tenor Sax</h6>
+                    </div>
+                    <div class="small_band">
+                        <img src="media/Nicole1.jpg" class="small_circle">
+                        <h5 class="small_name">Nicole Davis</h5>
+                        <h6 class="small_instr">Trumpet</h6>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content_square yellow">
+                <div class="small_band_wrapper">
+                    <div class="band_wrapper">
+                    <div class="small_band">
+                        <img src="media/Pedro.jpg" class="small_circle">
+                        <h5 class="small_name">Peter Enriquez</h5>
+                        <h6 class="small_instr">Guitar</h6>
+                    </div>
+                    <div class="small_band">
+                        <img src="media/Frisch2.jpg" class="small_circle">
+                        <h5 class="small_name">Peter Frisch</h5>
+                        <h6 class="small_instr">Trombone</h6>
+                    </div>
+                    </div>
+                                        <div class="band_wrapper">
+                    <div class="small_band">
+                        <img src="media/Ana.jpg" class="small_circle">
+                        <h5 class="small_name">Ana Gonzalez</h5>
+                        <h6 class="small_instr">Bass</h6>
+                    </div>
+                    <div class="small_band">
+                        <img src="media/Karsh1.jpg" class="small_circle">
+                        <h5 class="small_name">Michael Karsh</h5>
+                        <h6 class="small_instr">Bass</h6>
+                    </div>
+                    </div>
+                </div>
+                    
+            </div>
+            <div class="content_square red">
+                <div class="small_band_wrapper">
+                                                            <div class="band_wrapper">
+
+                    <div class="small_band">
+                        <img src="media/Jonny1.jpg" class="small_circle">
+                        <h5 class="small_name">Johnny Koh</h5>
+                        <h6 class="small_instr">Guitar </h6>
+                    </div>
+                    <div class="small_band">
+                        <img src="media/Marc1.jpg" class="small_circle">
+                        <h5 class="small_name">Marc Langer</h5>
+                        <h6 class="small_instr">Trumpet</h6>
+                    </div>
+                    </div>
+                                                            <div class="band_wrapper">
+
+                    <div class="small_band">
+                        <img src="media/Zach.jpg" class="small_circle">
+                        <h5 class="small_name">Zach Levine</h5>
+                        <h6 class="small_instr">Trumpet</h6>
+                    </div>
+                    <div class="small_band">
+                        <img src="media/Justin1.jpg" class="small_circle">
+                        <h5 class="small_name">Justin Ryan</h5>
+                        <h6 class="small_instr">Drums</h6>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Music" class="contains_arrow section">
+            <h3 class="title"> Music </h3>
+            <div class="outer_soundcloud content_square">
+                    <div class="media_wrapper sound_wrapper red">
+                        <iframe class="soundcloud_player" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/42956802&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+<!--                        <div class="soundcloud_text">The debut EP</div>-->
+                    </div>
+                    <div class="media_wrapper sound_wrapper orange">
+                    <iframe class="soundcloud_player" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/42966232&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+<!--                        <div class="soundcloud_text">Some live stuff</div>-->
+                        </div>
+                <div class="see_all">
+                    <a href="https://soundcloud.com/clydelawrencemusic">
+                <p class="see_all_text">See all</p>
+                <span class="see_all_arrow fa fa-arrow-circle-right fa-lg"></span>
+                    </a>
+                </div>
+                    </div>
+            </div>
+        <div id="Video" class="contains_arrow section">
+            <h3 class="title"> Videos </h3>
+            <div class="outer_video content_square">
+                <div class="media_wrapper video_wrapper orange">
+
+                    <iframe class="video" src="//www.youtube.com/embed/5do68Uvsmx0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="media_wrapper video_wrapper red">
+
+                    <iframe class="video" src="//www.youtube.com/embed/5HHRSxC5dA0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="media_wrapper video_wrapper red">
+
+                    <iframe class="video" src="//www.youtube.com/embed/ok7JZBZUu_U" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="media_wrapper video_wrapper orange">
+
+                    <iframe class="video" src="//www.youtube.com/embed/oDXY0982rmI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="see_all">
+                    <a href="https://youtube.com/clydelawrencemusic">
+                <p class="see_all_text">See all</p>
+                <span class="see_all_arrow fa fa-arrow-circle-right fa-lg"></span>
+                    </a>
+                </div>
+            </div>
+                
+        </div>
+        <div id="Photos" class="contains_arrow section">
+            <h3 class="title"> Photos </h3>
+            <div class="content_square">
+<script src="http://snapwidget.com/js/snapwidget.js"></script>
+<iframe src="http://snapwidget.com/in/?u=Y2x5ZGVsYXdyZW5jZW11c2ljfGlufDEyNXwzfDJ8fG5vfDEwfGZhZGVPdXR8b25TdGFydHx5ZXN8eWVz&ve=011114" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
+                <div class="see_all">
+                    <a href="https://instagram.com/clydelawrencemusic">
+                <p class="see_all_text">See all</p>
+                <span class="see_all_arrow fa fa-arrow-circle-right fa-lg"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="contact" class="section">
+            <h3 class="title">Contact</h3>
+            <div class="content_square orange social_media">
+                <p id="contact_text" class="large_text">For more information, booking requests or everything else in between, contact us</p>
+                <a href="mailto:Jeremy@MischiefMGMT.com">
+                <i class="email_icon fa fa-envelope-o fa-2x"></i>
+                <p id="email_text">Jeremy@MischiefMGMT.com</p>
+                </a>
+            </div>
+            <div class="content_square red social_media">
+                <i class="social_icon fa fa-twitter fa-4x"></i>
+                <i class="social_icon fa fa-youtube fa-4x"></i>
+                <i class="social_icon fa fa-facebook fa-4x"></i>
+                <i class="social_icon fa fa-instagram fa-4x"></i>
+                <i class="social_icon fa fa-spotify fa-4x"></i>
+                <i class="social_icon fa fa-soundcloud fa-4x"></i>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
